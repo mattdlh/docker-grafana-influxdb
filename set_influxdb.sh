@@ -45,7 +45,7 @@ if [ -f "/.influxdb_configured" ]; then
     echo "=> Database had been created before, skipping ..."
 else
     echo "=> Starting InfluxDB ..."
-    exec /usr/bin/influxdb -config=${CONFIG_FILE} &
+    exec /opt/influxdb/influxd -config=${CONFIG_FILE} &
     arr=$(echo ${PRE_CREATE_DB} | tr ";" "\n")
 
     #wait for the startup of influxdb
