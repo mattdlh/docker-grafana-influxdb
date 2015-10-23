@@ -23,7 +23,7 @@ RUN 	apt-get -y install wget nginx-light supervisor curl
 
 # Install Grafana to /src/grafana
 RUN		mkdir -p src/grafana && cd src/grafana && \
-			wget http://grafanarel.s3.amazonaws.com/grafana-${GRAFANA_VERSION}.linux-x64.tar.gz -O grafana.tar.gz && \
+			wget http://grafanarel.s3.amazonaws.com/builds/grafana-${GRAFANA_VERSION}.linux-x64.tar.gz -O grafana.tar.gz && \
 			tar xzf grafana.tar.gz --strip-components=1 && rm grafana.tar.gz
 
 # Install InfluxDB
